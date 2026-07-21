@@ -51,6 +51,14 @@
 			#main strong, #main b { color: var(--forest-800); }
 			#main > section { border-top: solid 1px var(--line) !important; }
 
+			/* ---------- Banner (template: .image.main fixed height 20em desktop /
+			   12em mobile + object-fit cover = crops the 4:1 image).
+			   Frame follows the image's own ratio instead, so nothing is cropped. */
+			#about .image.main {
+				height: auto;
+				aspect-ratio: 4 / 1;
+			}
+
 			/* ---------- Sidebar (template: background #7090a2) ---------- */
 			#header {
 				background-color: var(--forest-800) !important;
@@ -319,13 +327,13 @@
 						<li><a href="#projects">Projects</a></li>
 						<li><a href="#youtube">YouTube</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<li><a href="Tatiana Patrusheva Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+						<li><a href="assets/Tatiana_Patrusheva_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
 					</ul>
 				</nav>
 				<footer>
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/tatiana-patrusheva/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/ailinnesse" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+						<li><a href="https://github.com/ailinnesse?tab=repositories" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
 						<li><a href="https://www.youtube.com/@dragofab" class="icon brands fa-youtube" target="_blank" rel="noopener"><span class="label">YouTube</span></a></li>
 					</ul>
 				</footer>
@@ -569,7 +577,7 @@
 									<ul class="feature-icons">
 										<li class="icon solid fa-envelope"><a href="mailto:patrushevtatiana@gmail.com">patrushevtatiana@gmail.com</a></li>
 										<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/tatiana-patrusheva/" target="_blank" rel="noopener">LinkedIn</a></li>
-										<li class="icon brands fa-github"><a href="https://github.com/ailinnesse" target="_blank" rel="noopener">GitHub</a></li>
+										<li class="icon brands fa-github"><a href="https://github.com/ailinnesse?tab=repositories" target="_blank" rel="noopener">GitHub</a></li>
 										<li class="icon solid fa-map-marker-alt">Milton Keynes, UK</li>
 									</ul>
 								</div>
