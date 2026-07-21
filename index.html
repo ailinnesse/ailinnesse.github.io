@@ -59,6 +59,52 @@
 				aspect-ratio: 4 / 1;
 			}
 
+			/* On phones the <picture> swaps in the taller left-crop of the banner
+			   (banner-mobile.png, ~1.76:1), so the frame follows that ratio instead. */
+			#about .image.main img { display: block; width: 100%; height: 100%; object-fit: cover; }
+			@media screen and (max-width: 736px) {
+				#about .image.main { aspect-ratio: 1050 / 597; }
+			}
+
+			/* ---------- Mobile intro card ----------
+			   The template hides the sidebar off-canvas below 1024px, taking the
+			   photo with it. This card puts the face back at the top of the page
+			   on small screens only. */
+			.mobile-intro { display: none; }
+			@media screen and (max-width: 1024px) {
+				.mobile-intro {
+					display: flex;
+					align-items: center;
+					gap: 1em;
+					margin: 0 0 2em;
+					padding: 1em 1.15em;
+					background: var(--surface);
+					border: 1px solid var(--line);
+					border-radius: 12px;
+				}
+				.mobile-intro img {
+					width: 76px;
+					height: 76px;
+					flex-shrink: 0;
+					border-radius: 50%;
+					object-fit: cover;
+					border: 3px solid var(--gold-500);
+				}
+				.mobile-intro-text span { display: block; line-height: 1.45; }
+				.mi-name { font-weight: 800; color: var(--forest-900); font-size: 1.05em; }
+				.mi-role { color: var(--ink); font-size: .82em; font-weight: 600; margin-top: .1em; }
+				.mi-pillars { color: var(--muted); font-size: .74em; letter-spacing: .03em; margin-top: .15em; }
+			}
+
+			/* ---------- Mobile title bar (template: background #222) ----------
+			   The fixed top bar with the hamburger that appears below 1024px. */
+			#titleBar { background: var(--forest-900) !important; color: #fff !important; }
+			#titleBar .title, #titleBar .title a { color: #fff !important; }
+			#titleBar .toggle:before {
+				background: var(--forest-800) !important;
+				color: var(--gold-400) !important;
+			}
+
 			/* ---------- Sidebar (template: background #7090a2) ---------- */
 			#header {
 				background-color: var(--forest-800) !important;
@@ -348,9 +394,23 @@
 						<!-- About -->
 							<section id="about">
 								<div class="image main" data-position="center">
-									<img src="images/banner.png" alt="" />
+									<picture>
+										<source media="(max-width: 736px)" srcset="images/banner-mobile.png" />
+										<img src="images/banner.png" alt="DragoFab — from raw data to decisions" />
+									</picture>
 								</div>
 								<div class="container">
+
+									<!-- Shown only on mobile/tablet, where the sidebar (and photo) is hidden off-canvas -->
+									<div class="mobile-intro">
+										<img src="images/me.png" alt="Portrait of Tatiana Patrusheva" />
+										<div class="mobile-intro-text">
+											<span class="mi-name">Tatiana Patrusheva</span>
+											<span class="mi-role">Senior Data &amp; Analytics Professional</span>
+											<span class="mi-pillars">Power BI · Data Engineering · Data Science</span>
+										</div>
+									</div>
+
 									<header class="major">
 										<h2>About me</h2>
 									</header>
