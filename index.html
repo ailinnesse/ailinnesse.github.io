@@ -7,16 +7,16 @@
 -->
 <html lang="en">
 	<head>
-		<title>Tatiana Patrusheva — Data &amp; Analytics Professional | Power BI, Data Engineering, AI</title>
+		<title>Tatiana Patrusheva — Data &amp; Analytics Professional | Data Engineering, AI, Power BI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Tatiana Patrusheva — senior data and analytics professional in the UK. Power BI and semantic model optimisation, data engineering with Microsoft Fabric, Azure Data Factory and Databricks, plus machine learning and LLM applications." />
+		<meta name="description" content="Tatiana Patrusheva — senior data and analytics professional in the UK. Data engineering with Microsoft Fabric, Azure Data Factory and Databricks; AI and LLM applications; Power BI and semantic model optimisation. Microsoft Certified: SQL AI Developer Associate." />
 
 		<!-- Link preview (LinkedIn, Slack, X) -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://ailinnesse.github.io/" />
 		<meta property="og:title" content="Tatiana Patrusheva — Data &amp; Analytics Professional" />
-		<meta property="og:description" content="Power BI · Data Engineering · Data Science. Semantic model optimisation, Microsoft Fabric migrations, and practical AI tools." />
+		<meta property="og:description" content="Data Engineering · AI · Power BI. Microsoft Fabric migrations, AI-enabled SQL, and semantic model optimisation. Microsoft Certified: SQL AI Developer Associate." />
 		<meta property="og:image" content="https://ailinnesse.github.io/images/dragofab_solving.png" />
 		<meta name="twitter:card" content="summary_large_image" />
 
@@ -132,7 +132,22 @@
 
 			.sidebar-role { display:block; font-weight:700; color:#fff !important; letter-spacing:.01em; }
 			.sidebar-pillars { display:block; margin-top:.15rem; font-size:.82em; color:var(--gold-400) !important; letter-spacing:.04em; }
+			.sidebar-cert { display:block; margin-top:.5rem; font-size:.74em; line-height:1.5; color:rgba(255,255,255,.85) !important; }
+			.sidebar-cert a.cert-name { color:#fff !important; font-weight:600; border-bottom:1px dotted rgba(255,255,255,.45); }
+			.sidebar-cert a.cert-name:hover { color:var(--gold-400) !important; border-bottom-color:var(--gold-400); }
 			.sidebar-mail { display:block; margin-top:.5rem; font-size:.85em; }
+
+			/* ---------- Project group headings ---------- */
+			.proj-group {
+				margin: 2.25em 0 1.1em;
+				font-size: .78em;
+				font-weight: 800;
+				letter-spacing: .12em;
+				text-transform: uppercase;
+				color: var(--forest-700);
+			}
+			.proj-group:first-of-type { margin-top: 1.5em; }
+			.proj-group .icon { color: var(--gold-500); margin-right: .5em; }
 
 			/* ---------- Links & buttons (template: .button color #fff !important) ---------- */
 			#main a { color: var(--forest-700); border-bottom-color: rgba(53,107,58,.35); }
@@ -361,7 +376,8 @@
 					<h1 id="logo"><a href="#">Tatiana Patrusheva</a></h1>
 					<p>
 						<span class="sidebar-role">Senior Data &amp; Analytics Professional</span>
-						<span class="sidebar-pillars">Power BI · Data Engineering · Data Science</span>
+						<span class="sidebar-pillars">Data Engineering · AI · Power BI</span>
+						<span class="sidebar-cert">Microsoft Certified:<br /><a href="https://learn.microsoft.com/en-us/users/tatianapatrusheva-7412/credentials/e207327576e5b6e8" class="cert-name" target="_blank" rel="noopener">SQL AI Developer Associate</a></span>
 						<span class="sidebar-mail">patrushevtatiana@gmail.com</span>
 					</p>
 				</header>
@@ -407,7 +423,7 @@
 										<div class="mobile-intro-text">
 											<span class="mi-name">Tatiana Patrusheva</span>
 											<span class="mi-role">Senior Data &amp; Analytics Professional</span>
-											<span class="mi-pillars">Power BI · Data Engineering · Data Science</span>
+											<span class="mi-pillars">Data Engineering · AI · Power BI</span>
 										</div>
 									</div>
 
@@ -415,7 +431,7 @@
 										<h2>About me</h2>
 									</header>
 
-									<p>I work across the full data lifecycle — <strong>business intelligence, data engineering, and data science</strong>. Most of my work lives in Power BI, where I design and optimise semantic models built to stay fast and cost-efficient at scale. Alongside that I build and maintain the pipelines that feed them, and I reach for Python, machine learning, or LLMs when they solve a problem better than a dashboard can.</p>
+									<p>I work across the full data lifecycle — <strong>data engineering, AI, and business intelligence</strong>. Most of my work lives in Power BI, where I design and optimise semantic models built to stay fast and cost-efficient at scale. Alongside that I build and maintain the pipelines that feed them, and I reach for Python, machine learning, or LLMs when they solve a problem better than a dashboard can.</p>
 
 									<p>What I enjoy most is the messy end: taking unreliable data and a vague business question, and turning them into something people actually trust and use.</p>
 
@@ -476,7 +492,7 @@
 									<ul class="edu">
 										<li><strong>General Assembly</strong> — Data Science Fellow: Python, machine learning and predictive modelling.</li>
 										<li><strong>Mendeleyev University of Chemical Technology</strong>, Moscow — BSc, Biotechnology Engineering.</li>
-										<li><strong>Certifications</strong> — Agentic AI Level 1 (SuperDataScience, 2026) · Fabric Analyst in a Day (Pragmatic Works, 2025) · Storytelling with Data (2024) · Data Analyst in SQL &amp; Power BI (DataCamp, 2022).</li>
+										<li><strong>Certifications</strong> — <strong><a href="https://learn.microsoft.com/en-us/users/tatianapatrusheva-7412/credentials/e207327576e5b6e8" target="_blank" rel="noopener">Microsoft Certified: SQL AI Developer Associate</a></strong> (DP-800, 2026) · Agentic AI Level 1 (SuperDataScience, 2026) · Fabric Analyst in a Day (Pragmatic Works, 2025) · Storytelling with Data (2024) · Data Analyst in SQL &amp; Power BI (DataCamp, 2022).</li>
 									</ul>
 								</div>
 							</section>
@@ -548,18 +564,39 @@
 								<div class="container">
 									<h3>Projects</h3>
 
+									<h4 class="proj-group"><span class="icon solid fa-bolt"></span>Recent work</h4>
+
 									<div class="features">
+
+										<article>
+											<a href="https://github.com/ailinnesse/VoC-Risk-Scorecard" class="image" target="_blank" rel="noopener"><img src="images/voc_scorecard.png" alt="VoC Risk Scorecard — per-SKU customer risk ranking" /></a>
+											<div class="inner">
+												<h4>VoC Risk Scorecard — trust-audited vector search on SQL Server</h4>
+												<p>Built live for the Microsoft SQL AI Promptathon (July 2026). A rerunnable notebook that connects to SQL Server and recomputes a per-SKU customer-risk scorecard from reviews, support chats, tickets and sales. The distinctive part: instead of trusting vector similarity, it audits it — hand-labelling retrieved matches to measure precision and recall, surfacing the failure modes a naive pipeline would hide. Two independent methods converged on the same at-risk product.</p>
+												<ul class="actions">
+													<li><a href="https://github.com/ailinnesse/VoC-Risk-Scorecard" class="button primary" target="_blank" rel="noopener">View code</a></li>
+													<li><a href="https://github.com/microsoft/sql-ai-promptathon/issues/18" class="button" target="_blank" rel="noopener">Competition entry</a></li>
+												</ul>
+											</div>
+										</article>
 
 										<article>
 											<a href="https://huggingface.co/spaces/ailinnesse/Subreddit_Pulse" class="image" target="_blank" rel="noopener"><img src="images/subreddit_pulse.svg" alt="Subreddit Pulse app preview" /></a>
 											<div class="inner">
 												<h4>Subreddit Pulse — AI-powered Reddit insight app</h4>
-												<p>An agentic AI app that turns Reddit discussions into clear, research-style insights. It pairs web search tools with a lightweight GPT-4o-mini model to analyse subreddit activity, surface themes, summarise sentiment and highlight emerging topics — a demonstration of how tool use makes even a small model genuinely useful for practical analysis.</p>
+												<p>An agentic AI app that turns any subreddit into a structured daily digest — themes, notable posts, repeated questions, and a takeaway. It pairs a domain-locked search tool with a small, cheap model (GPT-4o-mini) and strict grounding rules — a demonstration that retrieval quality and tool use, not model size, determine how useful an AI app is.</p>
 												<ul class="actions">
 													<li><a href="https://huggingface.co/spaces/ailinnesse/Subreddit_Pulse" class="button primary" target="_blank" rel="noopener">Open app</a></li>
+													<li><a href="https://github.com/ailinnesse/subreddit-pulse" class="button" target="_blank" rel="noopener">View code</a></li>
 												</ul>
 											</div>
 										</article>
+
+									</div>
+
+									<h4 class="proj-group"><span class="icon solid fa-flask"></span>Earlier projects</h4>
+
+									<div class="features">
 
 										<article>
 											<a href="https://github.com/ailinnesse/MRI_disease_classification" class="image" target="_blank" rel="noopener"><img src="images/brain_tumor.jpg" alt="Brain MRI scan used in the disease classification project" /></a>
@@ -621,7 +658,7 @@
 										<img class="yt-banner" src="images/dragofab_solving.png" alt="DragoFab — the dragon mascot solving a data problem" />
 									</a>
 
-									<p>I teach Power BI performance optimisation. <strong>DragoFab</strong> is my channel for practical tips, tricks and tutorials — interactive dashboards, paginated reports, DAX techniques, automation, and storytelling with data. It's where I work out how to explain the things I've just spent a week fixing.</p>
+									<p><strong>DragoFab</strong> is my Power BI channel — practical tips, tricks and tutorials for everyone from everyday users to developers: interactive dashboards, paginated reports, DAX techniques, performance optimisation, automation, and storytelling with data. It's where I work out how to explain the things I've just spent a week fixing.</p>
 
 									<ul class="actions">
 										<li><a href="https://www.youtube.com/@dragofab" class="button primary icon brands fa-youtube" target="_blank" rel="noopener">Watch on YouTube</a></li>
