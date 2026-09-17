@@ -12,6 +12,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Tatiana Patrusheva — BI and analytics lead in Milton Keynes, UK. Microsoft Fabric migrations, dimensional and semantic modelling, data governance and row-level security, Power BI performance, and applied AI on real business data. Microsoft Certified: SQL AI Developer Associate." />
 
+		<!-- Favicon -->
+		<link rel="icon" href="images/favicon.png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
 		<!-- Link preview (LinkedIn, Slack, X) -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://ailinnesse.github.io/" />
@@ -59,8 +63,8 @@
 				aspect-ratio: 4 / 1;
 			}
 
-			/* On phones the <picture> swaps in the taller left-crop of the banner
-			   (banner-mobile.png, ~1.76:1), so the frame follows that ratio instead. */
+			/* On phones the <picture> swaps in the taller crop of the banner
+			   (banner-mobile.png, 1050:597), so the frame follows that ratio instead. */
 			#about .image.main img { display: block; width: 100%; height: 100%; object-fit: cover; }
 			@media screen and (max-width: 736px) {
 				#about .image.main { aspect-ratio: 1050 / 597; }
@@ -433,7 +437,7 @@
 
 									<p>Most data migrations look tidy on a diagram. The reality is old logic, undocumented joins, duplicate metrics, and reports people still depend on. The hard part is understanding a sparsely documented legacy system well enough to rebuild it without reproducing its problems.</p>
 
-									<p>I work across <strong>BI and analytics, data architecture and semantic modelling</strong>, with applied AI on top. I design dimensional models and governed semantic layers that non-technical colleagues can self-serve from safely, set the standards the people building on them work to, and use SQL to understand and validate what the source systems actually contain.</p>
+									<p>I work across <strong>BI and analytics, data architecture and semantic modelling</strong>, with applied AI on top. I design dimensional models with conformed dimensions and governed semantic layers that non-technical colleagues can self-serve from safely, set the standards the people building on them work to, and use SQL to understand and validate what the source systems actually contain.</p>
 
 									<p>The habit that runs through all of it is not trusting outputs I haven't audited. I use LLMs to untangle undocumented legacy logic, then validate every result against the source systems. Building a Voice-of-Customer risk pipeline on SQL Server vector search, I hand-labelled the retrieved matches and measured precision and recall rather than assuming similarity meant relevance.</p>
 
@@ -463,23 +467,23 @@
 											<p class="blurb">One of the world's market leaders in drainage technology.</p>
 											<ul>
 												<li><strong>Fabric migration:</strong> act as technical authority for the client side of the migration to <strong>Microsoft Fabric</strong> — selected the engineering supplier, defined the target architecture and data requirements, review and test delivery, and hold final client-side sign-off for go-live.</li>
-												<li><strong>Architecture &amp; modelling:</strong> designed a pipeline-based Fabric architecture and worked through a cross-region <strong>Dynamics 365</strong> mirroring constraint by introducing a small secondary F2 capacity in the reporting region. Rebuilding the reporting estate from a legacy single-table design into a <strong>dimensional star schema</strong> and governed semantic layer on the OneLake SQL analytics endpoint.</li>
+												<li><strong>Architecture &amp; modelling:</strong> designed a pipeline-based Fabric architecture and worked through a cross-region <strong>Dynamics 365</strong> mirroring constraint by introducing a small secondary F2 capacity in the reporting region. Rebuilding the reporting estate from a legacy single-table design into a <strong>dimensional model with multiple fact tables and conformed dimensions</strong>, and a governed semantic layer on the OneLake SQL analytics endpoint.</li>
 												<li><strong>Reporting governance:</strong> audited the report estate using usage data and column- and measure-level <strong>lineage analysis</strong>, secured senior management support for named business owners, and chaired the review sessions — <strong>retiring 30% of reports and removing 40% of pages</strong> from those retained, and surfacing reporting gaps nobody had raised before.</li>
 												<li><strong>Platform operations &amp; release control:</strong> keep the existing <strong>Azure Data Factory</strong> pipelines and <strong>Databricks</strong> jobs running through the transition — monitoring failures, resolving failed runs and maintaining scheduled processing. Maintain separate development and production workspaces so changes are tested before release.</li>
-												<li><strong>Performance &amp; cost:</strong> re-engineered core semantic models, cutting capacity usage from <strong>4M to 800K CU (−80%)</strong> and refresh time from around <strong>70 minutes to 8</strong>. Brought platform support in-house in June 2026, reducing external support spend to zero, and built the Fabric business case projecting a further 50% cut in platform running costs after go-live.</li>
+												<li><strong>Performance &amp; cost:</strong> re-engineered core semantic models, cutting capacity usage from <strong>4M to 800K CU (−80%)</strong> and refresh time from around <strong>70 minutes to 8</strong>. Brought platform support in-house in June 2026, reducing external support spend to zero, and built the Fabric business case projecting a further 50% reduction in platform running costs after go-live.</li>
 												<li><strong>AI:</strong> first point of contact for AI questions from the business, working with group IT on practical use cases, capabilities and controls. Used LLM tooling to recover undocumented logic from the legacy platform — joins, calculations and column mappings — validating every result against the source systems before it reached the build specification.</li>
 											</ul>
 										</li>
 
 										<li>
 											<h4>Skanska — <span class="role">Analytics Developer</span></h4>
-											<span class="meta">Jun 2023 – Sep 2025 · Durham, NC, USA · global · progressed from Data Visualization Specialist</span>
+											<span class="meta">Jun 2023 – Sep 2025 · Durham, NC, USA · progressed from Data Visualization Specialist</span>
 											<p class="blurb">One of the world's largest development and construction companies.</p>
 											<ul>
 												<li><strong>Semantic modelling:</strong> built governed models integrating <strong>15+ source systems</strong> across datasets exceeding <strong>5M records</strong>, reducing reconciliation issues by 30%. Used <strong>DirectQuery</strong> where live access to source data was required.</li>
 												<li><strong>Power BI:</strong> optimised DAX, Power Query, SQL and model design, improving reporting efficiency by <strong>50%</strong>. Built and maintained <strong>30+ dashboards</strong> used by senior leadership and project teams across <strong>£1B+ of projects</strong>.</li>
-												<li><strong>Security &amp; governance:</strong> implemented complex multi-step <strong>row-level security</strong> across shared semantic models — static and dynamic roles, email-based user filtering and multi-role dynamic RLS. Worked with Finance, HR and Operations to standardise KPI definitions and reporting logic.</li>
-												<li><strong>Self-service:</strong> mentored <strong>5+ Citizen Developers</strong> building on the central semantic models, reviewing their DAX, modelling and reports against organisational standards so the same logic wasn't rebuilt five different ways.</li>
+												<li><strong>Row-level security:</strong> designed a role-based security model where different roles filter on different dimensions — by location, by restaurant, and by location/restaurant combination — with users able to hold several roles whose filters combine additively; implemented in DAX with <strong>USERPRINCIPALNAME()</strong> and <strong>RELATEDTABLE()</strong> over a user-to-role bridge.</li>
+												<li><strong>Self-service:</strong> mentored <strong>5+ Citizen Developers</strong> building on the central semantic models, reviewing their DAX, modelling and reports against organisational standards so the same logic wasn't rebuilt five different ways. Worked with Finance, HR and Operations to standardise KPI definitions and reporting logic.</li>
 												<li><strong>AI &amp; automation:</strong> built <strong>machine learning and LLM-based tools</strong> (OpenAI APIs, TensorFlow, time-series forecasting) to automate analysis and project planning, reducing manual analytical work by around 40%.</li>
 											</ul>
 										</li>
@@ -498,7 +502,6 @@
 									<ul class="edu">
 										<li><strong>General Assembly</strong> — Data Science Fellow: Python, machine learning and predictive modelling; built an MRI image-classification application.</li>
 										<li><strong>Mendeleyev University of Chemical Technology</strong>, Moscow — Engineer's Degree (5-year), Biotechnology.</li>
-										<li><strong>Earlier career</strong> — biotechnology engineering → cancer research → mobile application QA → machine learning and analytics.</li>
 										<li><strong>Certifications</strong> — <strong><a href="https://learn.microsoft.com/en-us/users/tatianapatrusheva-7412/credentials/e207327576e5b6e8" target="_blank" rel="noopener">Microsoft Certified: SQL AI Developer Associate</a></strong> (DP-800, 2026) · Agentic AI Level 1 (SuperDataScience, 2026) · Fabric Analyst in a Day (Pragmatic Works, 2025) · Plan, Create and Deliver Your Data Story (Storytelling with Data, 2024).</li>
 									</ul>
 								</div>
@@ -530,7 +533,8 @@
 											<h4><span class="icon solid fa-project-diagram"></span>Data Architecture &amp; Modelling</h4>
 											<ul class="tags">
 												<li class="hot">Microsoft Fabric</li>
-												<li>Dimensional Modelling (Kimball / Star Schema)</li>
+												<li>Dimensional Modelling (Kimball)</li>
+												<li>Conformed Dimensions</li>
 												<li>Semantic Layer Design</li>
 												<li>OneLake</li>
 												<li>Azure Data Factory</li>
@@ -591,7 +595,47 @@
 								<div class="container">
 									<h3>Projects</h3>
 
-									<h4 class="proj-group"><span class="icon solid fa-bolt"></span>Recent work</h4>
+									<h4 class="proj-group"><span class="icon solid fa-bolt"></span>Current work — platform, modelling &amp; governance</h4>
+
+									<div class="features">
+
+										<article>
+											<a href="https://github.com/ailinnesse/semantic-model" class="image" target="_blank" rel="noopener"><img src="images/semantic-model.png" alt="Legacy append table rebuilt as a dimensional model with multiple fact tables and conformed dimensions" /></a>
+											<div class="inner">
+												<h4>Rebuilding a legacy estate into a dimensional model — in public</h4>
+												<p>A step-by-step record of taking a legacy "one table, append everything" reporting estate apart and rebuilding it properly: agreeing with the business what is actually used, removing what isn't, then reverse-engineering which columns belong to which entity — and which belong to several. The result is multiple fact tables sharing conformed dimensions, which is where the real difficulty sits: getting separate facts to agree on the same dimensions at the same grain. Work in progress, published as I go.</p>
+												<ul class="actions">
+													<li><a href="https://github.com/ailinnesse/semantic-model" class="button primary" target="_blank" rel="noopener">Follow along on GitHub</a></li>
+													<li><a href="https://www.youtube.com/@dragofab/playlists" class="button" target="_blank" rel="noopener">Watch the series</a></li>
+												</ul>
+											</div>
+										</article>
+
+										<article>
+											<a href="https://www.youtube.com/watch?v=bPI76g56Zr4" class="image" target="_blank" rel="noopener"><img src="images/dataverse-fabric.png" alt="Dataverse in the UK, Fabric capacity in West Europe, linked via a small UK F2 capacity" /></a>
+											<div class="inner">
+												<h4>Not every Fabric error is a Fabric problem — linking Dynamics 365 to Fabric</h4>
+												<p>Mirroring Dataverse into Fabric is cheaper and less error-prone than building ingestion by hand, so it was the right call for our Dynamics 365 data. Getting the link working was another matter. Three failures, each with an error message pointing somewhere other than the cause: a Power BI licence error that was really a missing Dataverse System Administrator role; an "unauthorized" error that was the Fabric service principal lacking read access to the tables; and a region mismatch — Fabric capacity in West Europe, Dataverse in the UK — which the link will not cross. Solved with a small F2 capacity in the UK dedicated to the link, rather than moving the whole platform.</p>
+												<ul class="actions">
+													<li><a href="https://www.youtube.com/watch?v=bPI76g56Zr4" class="button primary icon brands fa-youtube" target="_blank" rel="noopener">Watch the walkthrough</a></li>
+												</ul>
+											</div>
+										</article>
+
+										<article>
+											<a href="https://youtu.be/O7FyDUS1G7w" class="image" target="_blank" rel="noopener"><img src="images/rls-model.png" alt="Row-level security model: user to role bridge feeding three different access types" /></a>
+											<div class="inner">
+												<h4>Row-level security when roles filter on different dimensions</h4>
+												<p>Most RLS examples give every role the same filter with different values. This one doesn't: different roles restrict on different dimensions — by location, by restaurant, and by location/restaurant combination — all against the same data. A user-to-role bridge lets one person hold several roles at once, which is where it usually breaks, because the filters have to combine additively rather than intersecting into nothing. Built with USERPRINCIPALNAME() and RELATEDTABLE(), and explained end to end in a four-part series.</p>
+												<ul class="actions">
+													<li><a href="https://youtu.be/O7FyDUS1G7w" class="button primary icon brands fa-youtube" target="_blank" rel="noopener">Watch the walkthrough</a></li>
+												</ul>
+											</div>
+										</article>
+
+									</div>
+
+									<h4 class="proj-group"><span class="icon solid fa-robot"></span>Applied AI</h4>
 
 									<div class="features">
 
@@ -657,26 +701,6 @@
 												</ul>
 											</div>
 										</article>
-
-										<!-- ============================================================
-										     SLOT FOR THE ARCHITECTURE CASE STUDY.
-										     Uncomment and fill in once you've confirmed what you can
-										     publish about the ACO work. Two stories are ready:
-										       1. Pipelines over a warehouse, and the cross-region
-										          Dynamics 365 mirroring constraint solved with a
-										          second F2 capacity.
-										       2. Deciding what to migrate — usage telemetry plus
-										          column- and measure-level lineage, named owners,
-										          30% of reports retired.
-
-										<article>
-											<a href="#" class="image"><img src="images/capacity-architecture.png" alt="Fabric capacity architecture diagram" /></a>
-											<div class="inner">
-												<h4>Choosing pipelines over a warehouse — and solving a cross-region mirroring constraint</h4>
-												<p>What drove the architecture decision, why Dynamics 365 could not be mirrored into the reporting region, and how a small second capacity solved it without doubling the platform cost.</p>
-											</div>
-										</article>
-										============================================================ -->
 
 									</div>
 								</div>
